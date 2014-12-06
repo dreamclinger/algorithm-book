@@ -9,7 +9,7 @@ for j = 2 to A.length
         i = i - 1
     A[i+1] = key
 
-real-code in python, notice the index begins from 0, not 1
+real-code in python, notice the index begins from 0, range(a,b) is [a,b)
 ====
 for j in range(1,len(A)):
     key = A[j]
