@@ -2,6 +2,8 @@
 # Author: dreamclinger@gmail.com
 # Create: 2014/12/03
 
+import random
+
 def insertsort(A):
     for j in range(1,len(A)):
         key = A[j]
@@ -13,6 +15,7 @@ def insertsort(A):
     return A
 
 if __name__ == '__main__':
-    Array = [4,5,1,2,3,7,2,13,11]
+    Array = random.sample(range(1,20),10)
+    print 'before sort: ',Array
     B = insertsort(Array)
-    print B
+    print 'after sort:  ',B
