@@ -16,8 +16,8 @@ def merge(A,p,q,r):
     for j in range(0,n2):
             R.append(A[q+j+1]) 
             #R[j] = A[q+j+1]   ## error in list index out of range 
-    L.append(100)  ## extreme-large number for easy-stop searching 
-    R.append(100)
+    L.append(float("inf"))  ## inf+ number for easy-compare and stop search
+    R.append(float("inf"))
     i = 0
     j = 0
     for k in range(p,r+1):    ## merge L and R to A
