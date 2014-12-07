@@ -12,10 +12,10 @@ def countsort(A,B,k):       ## page 195
         C[i] = 0
     for j in range(0,len(A)):  ## loop A[0] to A[len-1]
         C[A[j]] = C[A[j]] + 1 ## C contains the num that eq i
-    for i in range(1,k): 
+    for i in range(1,k+1): 
         C[i] = C[i] + C[i-1]  ## C contains the num that less or eq i 
     for j in range(len(A)-1,-1,-1):   ## loop A[len-1] downto A[0]
-        B[C[A[j]]] = A[j]
+        B[C[A[j]]-1] = A[j]   ## num - 1 -> index in B 
         C[A[j]] = C[A[j]] - 1
 
 if __name__ == '__main__':
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     L = []
     Array = [0]*10
     for i in range(0,10):
-        L.append(randint(1,k))
+        L.append(randint(0,k))
     print 'before sort: ',L
     countsort(L,Array,k)
     print 'after sort:  ',Array
