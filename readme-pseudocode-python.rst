@@ -49,3 +49,16 @@ math.floor / ceil
 ----
 #get integer
 
+exchange A[i] and A[j]
+----
+A[i], A[j] = A[j], A[i]
+
+randomize
+----
+random.randint(r,p) # [r,p]
+random.sample(range(1,21),10) # a list with 10 num, [1,20]
+
+new list
+----
+L = []    # new empty list
+L = [0]*n # new list with size n, initial zeros
