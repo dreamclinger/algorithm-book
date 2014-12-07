@@ -2,7 +2,7 @@
 # Author: dreamclinger@gmail.com
 # Create: 2014/12/03
 
-import random
+from random import sample
 
 def insertsort(A):
     for j in range(1,len(A)):
@@ -12,10 +12,9 @@ def insertsort(A):
             A[i+1] = A[i]
             i = i - 1
         A[i+1] = key
-    return A
 
 if __name__ == '__main__':
-    Array = random.sample(range(1,20),10)
+    Array = sample(range(1,20),10)
     print 'before sort: ',Array
-    B = insertsort(Array)
-    print 'after sort:  ',B
+    insertsort(Array)
+    print 'after sort:  ',Array
