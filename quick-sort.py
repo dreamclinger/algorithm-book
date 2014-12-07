@@ -3,6 +3,7 @@
 # Create: 2014/12/06
 
 from random import sample 
+from random import randint 
 from math import floor
 
 
@@ -22,9 +23,23 @@ def quicksort(A,p,r):
         quicksort(A,p,q-1)
         quicksort(A,q+1,r)
 
+def randomized_partition(A,p,r):  ## page 179
+    i = randint(p,r)         ##rand num in [p,r] ;while sample returns list
+    A[r], A[i] = A[i], A[r]
+    return partition(A,p,r)
+
+def randomized_quicksort(A,p,r):
+    if p < r:
+        q = randomized_partition(A,p,r)
+        randomized_quicksort(A,p,q-1)
+        randomized_quicksort(A,q+1,r)
+
 if __name__ == '__main__':
     maxnum = 10
-    Array = sample(range(1,20),maxnum)
-    print 'before sort: ',Array
-    quicksort(Array,0,len(Array)-1)
-    print 'after sort:  ',Array
+    Array1 = sample(range(1,20),maxnum)
+    Array2 = Array1
+    print 'before sort: ',Array1
+    quicksort(Array1,0,len(Array1)-1)
+    print 'after sort:  ',Array1
+    randomized_quicksort(Array2,0,len(Array2)-1)
+    print 'randomized:  ',Array2
