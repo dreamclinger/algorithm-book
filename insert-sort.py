@@ -2,6 +2,8 @@
 # Author: dreamclinger@gmail.com
 # Create: 2014/12/03
 
+from random import sample
+
 def insertsort(A):
     for j in range(1,len(A)):
         key = A[j]
@@ -10,9 +12,9 @@ def insertsort(A):
             A[i+1] = A[i]
             i = i - 1
         A[i+1] = key
-    return A
 
 if __name__ == '__main__':
-    Array = [4,5,1,2,3,7,2,13,11]
-    B = insertsort(Array)
-    print B
+    Array = sample(range(1,20),10)
+    print 'before sort: ',Array
+    insertsort(Array)
+    print 'after sort:  ',Array
