@@ -2,11 +2,11 @@
 # Author: dreamclinger@gmail.com
 # Create: 2014/12/06
 # Counting sort assumes that each of the n input elements is an integer in the range 0 to k, for some integer k.
-# Counting sort determines, for each input element x, the number of elements less than x.
+# Counting sort determines, for each input element x, the number of elements less than x. page 195.
 
 from random import sample, randint
 
-def countsort(A,B,k):       ## page 195
+def countsort(A,B,k):
     C = [0]*(k+1)      ## init new array C[0...k], k is num range len in A 
     for i in range(0,k+1):
         C[i] = 0
