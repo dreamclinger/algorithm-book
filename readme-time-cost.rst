@@ -54,4 +54,11 @@ heap sort     O(nlgn)    None
 quick sort    O(n^2)     O(nlgn)  
 count sort    O(k+n)     O(k+n)  
 radix sort    O(dk+dn)   O(dk+dn)  
-bucket sort   O(n^2)     O(n)  
+bucket sort   O(n^2)     O(n)     
+
+prove of cost of bucket sort
+----
+./readme-time-cost/bucket-sort.rtfd
+
+
+
