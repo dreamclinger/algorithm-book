@@ -7,7 +7,6 @@
 
 from random import sample, randint, random
 from math import floor
-import formatter
 
 class prettyfloat(float): ## format float number print
     def __repr__(self):
