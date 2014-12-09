@@ -5,9 +5,13 @@
 # If n is too large or too small, what occurs? figure.8.4 
 
 
-from random import sample, randint
+from random import sample, randint, random
 from math import floor
+import formatter
 
+class prettyfloat(float): ## format float number print
+    def __repr__(self):
+        return "%0.2f" % self
 
 def concatenate(L): ##flatten 2D list to 1D list
     C = []
@@ -30,11 +34,17 @@ def bucketsort(A):  ## like hash tree
     B = [0]*(n) ## create B[0...n-1], init empty. B will be 2D list
     for i in range(0,n): 
         B[i] = []
-    for i in range(0,n+1): ## B[floor(n*A[i])] = A[i]
-        B[floor(n*A[i])].append(A[i])
+    for i in range(0,n): ## B[floor(n*A[i])] = A[i]
+        B[int(floor(n*A[i]))].append(A[i])
     for i in range(0,n): 
         insertsort(B[i])
     C = concatenate(B) ## concatenate the lists B[0]...B[n-1]
     return C
 
 if __name__ == '__main__':
+    Array = []
+    for i in range(0,10):
+        Array.append(random())   ## normal random var in [0,1)
+    print 'before sort: ', map(prettyfloat, Array)
+    Newarray = bucketsort(Array)
+    print 'after sort:  ', map(prettyfloat, Newarray)
