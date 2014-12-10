@@ -10,9 +10,11 @@ from math import floor
 ##http://www.c4learn.com/c-programs/c-program-to-implement-stack-operations-using-array.html
 
 class MyStack(object):
-    
+
     def __init__(self):
         self.storage = []
+        self.s = []
+        self.top = 0
     
     def isEmpty(self):
         if len(self.storage) == 0:
