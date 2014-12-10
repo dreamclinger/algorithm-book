@@ -7,14 +7,18 @@ from random import sample, randint, random
 from math import floor
 
 ##stack? use one first? Class?
+##http://www.c4learn.com/c-programs/c-program-to-implement-stack-operations-using-array.html
 
-class Stack(object):
+class MyStack(object):
     
     def __init__(self):
         self.storage = []
     
     def isEmpty(self):
-        return len(self.storage) == 0
+        if len(self.storage) == 0:
+            return True
+        else
+            return False
     
     def push(self,p):
         self.storage[:0] = p
