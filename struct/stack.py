@@ -1,6 +1,7 @@
 #!/usr/local/bin/env python
 # Author: dreamclinger@gmail.com
 # Create: 2014/12/09
+# Now I don't use exsiting method in python (push, pop, appendix) 
 # http://www.c4learn.com/c-programs/c-program-to-implement-stack-operations-using-array.html 
 # The stack consists of elements S[0...S.top], where S[0] is the element at the bottom of the stack. When S.top = -1, the stack is empty
 
